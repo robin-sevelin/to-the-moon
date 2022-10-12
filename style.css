@@ -1,27 +1,119 @@
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  border: 1px solid black;
-  width: 100%;
-  height: 100px;
-}
-
-.box {
-  margin-top: 200px;
-  margin-left: 200px;
-  justify-content: center;
-  border: 1px solid black;
-  width: 300px;
-  height: 300px;
-}
-
-footer {
+button {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 0;
   position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+button span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+input {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+}
+
+input:checked + .menu button span {
+  position: absolute;
+  transition: 0, 3s ease-in-out;
+}
+
+input:checked + .menu button span:nth-child(2) {
+  opacity: 0;
+}
+
+input:checked + .menu button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+input:checked + .menu button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+nav {
+  font-size: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #9c70d575;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+input:checked + .menu nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+section {
+  min-height: 100vh;
   width: 100%;
-  height: 100px;
-  bottom: 0%;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1 {
+  background-color: aqua;
+  position: relative;
+}
+
+.section2 {
+  background-color: blueviolet;
+}
+/*
+.scroll-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  bottom: 20px;
+}
+
+.scroll-down {
+  transform: rotate(225deg);
+}
+
+.scroll-down::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 45px;
+  background-color: black;
+  transform: rotate(-45deg) translate(15px, 4px);
+  left: 0;
+  top: 0;
 }
