@@ -6,8 +6,6 @@ button {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 2;
-  pointer-events: none;
 }
 
 button span {
@@ -17,6 +15,16 @@ button span {
   background-color: black;
   border-radius: 6px;
   margin-bottom: 4px;
+}
+
+button span:nth-child(2) {
+  left: -6px;
+  position: relative;
+  transition: left 0.3s ease-in-out;
+}
+
+button:hover span:nth-child(2) {
+  left: 0%;
 }
 
 input {
@@ -83,13 +91,10 @@ section {
   align-items: center;
 }
 
-.sec-1 {
-  background-color: aqua;
-  position: relative;
-}
-
-#sec-2 {
-  background-color: blueviolet;
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
 }
 
 .scroll-down {
@@ -98,4 +103,12 @@ section {
   height: 20px;
   bottom: 5px;
   position: absolute;
+}
+
+.sec-1 {
+  background-color: aqua;
+}
+
+.sec-2 {
+  background-color: burlywood;
 }
