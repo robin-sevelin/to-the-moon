@@ -1,138 +1,86 @@
-body {
-  font-family: "Rubik";
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-header {
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  position: fixed;
-}
-
-main {
-  min-width: 100vw;
+.full-page {
   min-height: 100vh;
+  outline: orange;
 }
 
-section {
-  min-height: 100vh;
-  width: 100%;
-}
-/*
-.box {
-  top: 75px;
-  left: 50px;
-  position: relative;
-  border: 3px solid black;
-  width: 30%;
-  height: 200px;
-  background-color: rgba(236, 232, 227, 0.568);
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
+.to-the-moon {
+  border: 1px solid red;
 }
 
-.title-1 {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  width: 200px;
-  height: 170px;
-  position: absolute;
-}
-
-.our-story {
-  font-size: 12px;
-  height: 30px;
-  position: absolute;
-}
-
-.title-2 {
-  width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.sec-1 {
-  background-image: url("/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
-}
-
-#sec-2 {
-  background-image: url("assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  color: white;
-}
-*/
-.right-arrow {
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
-
-.right-arrow2 {
-  border: solid red;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
-
-.scroll-down {
-  border: 1px solid black;
-  width: 20px;
-  height: 20px;
-  bottom: 3%;
-  position: absolute;
-  right: 50%;
-  border-width: 0px 5px 5px 0px;
-  transform: rotate(45deg);
-  transition: 0, 3s;
+.space-ventures {
+  font-size: 3rem;
+  border: 1px solid green;
 }
 
 .space {
-  color: red;
-}
-
-.ventures {
-  font-family: "Times New Roman", Times, serif;
-  color: darkgrey;
+  display: block;
+  position: relative;
   z-index: 1;
-  text-align: center;
+}
+.ventures {
+  position: relative;
+  top: -50px;
+  left: 25px;
+  color: gray;
+  z-index: 0;
 }
 
 .ground-control {
-  text-align: center;
-  width: 80%;
+  border: 1px solid purple;
 }
 
-.quote {
-  text-align: center;
-  width: 80%;
+blockquote::before,
+blockquote::after {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: block;
+  content: "";
 }
 
-.ground-control2 {
-  text-align: center;
-  width: 90%;
+.hidden-quote {
+  display: none;
 }
 
-.poem {
-  width: 90%;
+.sitting {
+  border: 1px solid blue;
+  float: right;
 }
 
-a {
-  color: red;
+.major-tom {
+  display: none;
+}
+
+@media screen and (min-width: 920px) {
+  .full-page {
+    display: flex;
+    gap: 100px;
+  }
+
+  .wrapper,
+  .wrapper-2 {
+    width: 50%;
+  }
+
+  .hidden-quote {
+    font-size: 2rem;
+    color: rgba(201, 124, 165, 0.372);
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .major-tom {
+    display: block;
+    width: 100px;
+    height: auto;
+    float: right;
+    transform: rotate(3deg);
+  }
 }

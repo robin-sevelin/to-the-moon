@@ -12,7 +12,7 @@ button {
 
 button span {
   display: block;
-  width: 25px;
+  width: 35px;
   height: 5px;
   background-color: black;
   border-radius: 6px;
@@ -75,3 +75,14 @@ ul {
   justify-content: space-evenly;
   text-align: center;
 }
+
+/*  button span:nth-child(2) {
+      left: -6px;
+      position: relative;
+      transition: left 0.3s ease-in-out;
+    }
+  
+    button:hover span:nth-child(2) {
+      left: 0%;
+    }
+  */
