@@ -15,6 +15,14 @@ body {
   background-position: center;
 }
 
+.wrapper-page-2 {
+  background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: whitesmoke;
+}
+
 .full-page {
   min-height: 100vh;
 }
@@ -25,17 +33,28 @@ body {
   position: fixed;
 }
 
-.to-the-moon {
+.box {
   position: relative;
-  z-index: 1;
   top: 75px;
   left: 50px;
   width: 35%;
-  height: 200px;
+  height: fit-content;
   border: 4px solid black;
-  font-size: 1rem;
-  padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.to-the-moon {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.our-story {
+  justify-content: start;
+  font-size: 0.9rem;
+  left: 0;
 }
 
 .space-ventures {
@@ -45,6 +64,7 @@ body {
 }
 
 .space {
+  color: whitesmoke;
   display: block;
   position: relative;
   z-index: 1;
@@ -89,6 +109,12 @@ blockquote::after {
   .full-page {
     display: flex;
     gap: 100px;
+  }
+
+  .to-the-moon {
+    justify-content: center;
+    text-align: center;
+    font-size: 3.5rem;
   }
 
   .wrapper,
