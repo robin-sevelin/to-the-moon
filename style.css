@@ -3,24 +3,17 @@
   clear: both;
   display: table;
 }
-
+/*
 body {
-  font-family: "rubik";
+  font-family: "Rubik Mono One", sans-serif;
 }
-
+*/
 .wrapper-page-1 {
-  background-image: url("/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: brown;
 }
 
 .wrapper-page-2 {
-  background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: whitesmoke;
+  background-color: aquamarine;
 }
 
 .full-page {
@@ -40,21 +33,19 @@ body {
   width: 35%;
   height: fit-content;
   border: 4px solid black;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  opacity: 0.5;
 }
 
 .to-the-moon {
-  justify-content: center;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 .our-story {
-  justify-content: start;
-  font-size: 0.9rem;
-  left: 0;
+  font-weight: lighter 100;
 }
 
 .space-ventures {
@@ -75,6 +66,7 @@ body {
   left: 25px;
   color: gray;
   z-index: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .ground-control {
@@ -105,6 +97,22 @@ blockquote::after {
   display: none;
 }
 
+.footer {
+  border: 1px solid black;
+}
+
+.cookies {
+  justify-content: flex-start;
+}
+
+.button-start {
+  justify-content: flex-end;
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+}
+
 @media screen and (min-width: 920px) {
   .full-page {
     display: flex;
@@ -112,9 +120,10 @@ blockquote::after {
   }
 
   .to-the-moon {
-    justify-content: center;
-    text-align: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+
+  .our-story {
   }
 
   .wrapper,
@@ -126,7 +135,6 @@ blockquote::after {
     padding: 10px;
     position: relative;
     left: 0;
-    font-size: 3.5rem;
     color: rgba(232, 155, 196, 0.372);
     display: block;
     border: 1px solid black;
@@ -138,5 +146,7 @@ blockquote::after {
     height: auto;
     float: right;
     transform: rotate(3deg);
+    position: relative;
+    z-index: 1;
   }
 }
