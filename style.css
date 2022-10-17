@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+
 .full-page {
   width: 100vw;
   min-height: 100vh;
@@ -70,6 +71,42 @@ a{
 .arrow-move:hover span {
   left: 15px;
 }
+
+.button-down {
+  position: absolute;
+  padding: 5px;
+  margin: 30px auto;
+  background: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+  bottom: 0;
+  left: 50%;
+}
+
+.button-down:hover {
+  transform: translate3d(0, 10px, 0);
+}
+
+.button-down::after {
+  content: "";
+  position: absolute;
+  left: 12.5px;
+  z-index: 11;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+.button-down::after {
+  top: 10px;
+  transform: rotate(225deg);
+}
+
+
 
 .space-ventures {
   font-size: 3rem;
