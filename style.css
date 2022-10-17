@@ -1,32 +1,42 @@
-/*.clearfix::after {
+learfix::after {
   content: "";
   clear: both;
   display: table;
 }
-*/
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
+.full-page {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "rubik", sans-serif;
+}
+
 .top-page {
-  background-color: blanchedalmond;
+  background-image: url("/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   width: 100vw;
 }
 
-.bottom-page-left,
-.bottom-page-right {
-  background-color: aqua;
-}
-
-.full-page {
+.bottom-page {
   min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 0;
+  color: white;
+  background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
 }
 
 .header {
-  width: 100vw;
   position: fixed;
   height: auto;
 }
@@ -52,16 +62,7 @@
   font-size: 1.5vw;
 }
 
-.scroll-down {
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-}
-
 .space-ventures {
-  text-align: center;
-  padding: 10px;
   font-size: 3rem;
 }
 
@@ -70,28 +71,26 @@
   display: block;
   position: relative;
   z-index: 1;
+  top: 50px;
+  left: 10%;
 }
 .ventures {
   position: relative;
-  top: -50px;
-  left: 25px;
-  color: grey;
+  top: 50%;
+  left: 25%;
+  color: rgb(153, 148, 148);
   z-index: 0;
   font-family: "Times New Roman", Times, serif;
 }
 
 .ground-control {
-  padding: 10px;
-  border: 1px solid purple;
+  padding: 20px;
 }
 
-blockquote::before,
-blockquote::after {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  display: block;
-  content: "";
+blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: light;
 }
 
 .hidden-quote {
@@ -99,8 +98,8 @@ blockquote::after {
 }
 
 .sitting {
-  padding: 50px;
-  border: 1px solid blue;
+  padding: 10px;
+  justify-content: flex-start;
   float: right;
 }
 
@@ -108,14 +107,47 @@ blockquote::after {
   display: none;
 }
 
+.planet-earth ul {
+  text-align: left;
+}
+
+.tom-link {
+  color: red;
+}
+
 .footer {
+  padding: 10px;
+  background-color: darkslateblue;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
   border: 1px solid black;
+  position: absolute;
+  bottom: 0;
   width: 100vw;
 }
 
+.cookies {
+  color: #d200a2;
+}
+
+.accept-button {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 100px;
+  background-color: blue;
+  color: white;
+  font-family: "rubik", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 920px) {
-  .full-page {
+  .bottom-page {
     display: flex;
+    background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash\ desktop\(kopia\).jpg");
   }
 
   .bottom-page-left,
@@ -124,18 +156,27 @@ blockquote::after {
   }
 
   .hidden-quote {
-    padding: 10px;
+    font-style: italic;
+    padding: 30px;
+    font-family: "rubik", sans-serif;
+    font-size: 2.5rem;
+    margin-top: 200px;
+    height: 300px;
     position: relative;
-    left: 0;
     color: rgba(232, 155, 196, 0.372);
     display: block;
-    border: 1px solid black;
+  }
+
+  .sitting {
+    padding: 50px;
+    float: right;
+    height: auto;
   }
 
   .major-tom {
-    padding: 10px;
+    padding: 20px;
     display: block;
-    width: 100px;
+    width: 150px;
     height: auto;
     float: right;
     transform: rotate(3deg);
