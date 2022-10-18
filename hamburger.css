@@ -1,17 +1,13 @@
-.menu {
-  position: relative;
-}
-
 button {
   width: 35px;
   height: 35px;
   background: transparent;
   border: 0;
   position: fixed;
+  pointer-events: none;
   right: 20px;
   top: 20px;
-  z-index: 3;
-  pointer-events: none;
+  z-index: 2;
 }
 
 button span {
@@ -25,8 +21,8 @@ button span {
 
 input {
   position: fixed;
-  right: 20px;
   top: 20px;
+  right: 20px;
   width: 35px;
   height: 35px;
   opacity: 0;
@@ -50,17 +46,16 @@ input:checked + .menu button span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.drop-down-menu {
+nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.617);
   width: 100vw;
   min-height: 100vh;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  z-index: 2;
+  display: hidden;
+  transition: opacity 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 input:checked + .menu nav {
@@ -70,12 +65,9 @@ input:checked + .menu nav {
 
 ul {
   text-transform: uppercase;
-  text-decoration: none;
   font-size: 4rem;
-  margin: 0;
-  padding: 0;
-  display: flex;
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;

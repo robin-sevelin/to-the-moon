@@ -1,10 +1,9 @@
-/*
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
-*/
+
 /*
 html {
   font-size: calc(0.75rem + 1.5vw);
@@ -37,7 +36,6 @@ p {
 }
 
 .bottom-page {
-  position: relative;
   color: white;
   background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
   background-size: cover;
@@ -50,24 +48,22 @@ p {
 .header {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 75px;
 }
 
 .box {
   position: relative;
+  display: block;
   top: 75px;
   left: 75px;
-  width: 30%;
+  width: 35%;
   border: 4px solid black;
-  display: flex;
-  flex-direction: column;
   padding: 5px;
-  z-index: 0;
 }
 
 .to-the-moon {
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 4vw;
   text-transform: uppercase;
 }
 
@@ -98,6 +94,7 @@ a {
   transition: all 0.2s linear;
   bottom: 0;
   left: 50%;
+  z-index: 1;
 }
 
 .button-down:hover {
@@ -153,8 +150,10 @@ blockquote {
   font-size: 1.5rem;
   font-style: italic;
   margin: 10px;
-  padding: 20px;
+  padding: 30px;
   font-weight: 100;
+  text-align: center;
+  justify-content: center;
 }
 
 .hidden-quote {
@@ -187,8 +186,8 @@ blockquote {
 
 .footer {
   padding: 10px;
-  background-color: darkslateblue;
-  opacity: 0.9;
+  background-color: rgb(36, 30, 74);
+  opacity: 0.8;
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
@@ -200,19 +199,7 @@ blockquote {
   color: #d200a2;
 }
 
-.glow {
-  position: relative;
-  z-index: 1;
-  border-radius: 50%;
-  box-shadow: inset 0 0 50px #fff, /* inner white */ inset 20px 0 80px #f0f,
-    /* inner left magenta short */ inset -20px 0 80px #0ff,
-    /* inner right cyan short */ inset 20px 0 300px #f0f,
-    /* inner left magenta broad */ inset -20px 0 300px #0ff,
-    /* inner right cyan broad */ 0 0 50px #fff,
-    /* outer white */ -10px 0 80px #f0f,
-    /* outer left magenta */ 10px 0 80px #0ff; /* outer right cyan */
-}
-*/ .accept-button {
+.accept-button {
   display: flex;
   flex-direction: column;
   height: 30px;
@@ -225,7 +212,16 @@ blockquote {
 }
 
 @media screen and (min-width: 920px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .arrow-move,
+  .black-arrow {
+    text-align: right;
+  }
   .bottom-page {
+    gap: 100px;
     display: flex;
     background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash\ desktop\(kopia\).jpg");
   }
@@ -233,13 +229,22 @@ blockquote {
   .bottom-page-left,
   .bottom-page-right {
     width: 50%;
-    font-size: 1.5vw;
+  }
+
+  .space-ventures {
+    margin-top: 100px;
+  }
+
+  .ground-control {
+    padding: 20px;
+    margin-top: 100px;
   }
 
   .hidden-quote {
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: italic;
-    padding: 30px;
+    font-weight: 100;
+    padding: 40px;
     margin-top: 200px;
     height: 300px;
     color: rgba(232, 155, 196, 0.372);
