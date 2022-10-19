@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="hamburger.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +16,9 @@
     />
   </head>
   <body>
+    <!--top-page starts-->
     <section class="full-page">
       <div class="top-page">
-        <header class="header">
             <input type="checkbox" />
           <div class="menu">
             <button>
@@ -27,27 +26,32 @@
               <span></span>
               <span></span>
             </button>
+            <!--drop down menu start-->
             <nav>
               <ul>
-                <li>our story</li>
-                <li>space ventures</li>
-                <li>about tom</li>
+                <li><a class="list-our-story" href="#">our story</a></li>
+                <li><a class="list-space-ventures" href="#">space<br/>ventures</a></li>
+                <li><a class="list-about-tom" href="#">about<br/>tom</a></li>
               </ul>
             </nav>
+            <!--drop down menu ends-->
           </div>
-        </header>
-
-        <div class="box">
-          <div class="to-the-moon">
-            <h1>to the moon</h1>
+          <header class="header">
+            <div class="to-the-moon">
+              <h1>to the moon</h1>
+            </div>
+            <a class="arrow-move" href="#">Read our story <span>➜</span></a>
+          </header>
+          <div class="arrow-down">
+            <span>➜</span>
           </div>
-          <a class="arrow-move" href="#">Read our story <span class="black-arrow">➜</span></a>
-        </div>
-        <div class="button-down"></div>
       </div>
     </section>
+    <!--top page ends-->
+    <!--bottom page starts-->
     <section class="full-page">
       <div class="bottom-page">
+    <!--bottom page left starts-->
         <div class="bottom-page-left">
           <div class="space-ventures">
             <h2>
@@ -68,18 +72,21 @@
               Control. I'm stepping through the door.
             </p>
           </div>
+          <!--blockquote starts-->
           <blockquote class="floating">
-            "And I'm floating in a most peculiar way. And the stars look very
-            different today. For here."
+            And I'm floating in a most peculiar way. And the stars look very
+            different today. For here.
           </blockquote>
+          <!--blockquote ends-->
         </div>
-
+      <!--bottom page left ends-->
+      <!--bottom page right starts-->
         <div class="bottom-page-right">
           <div class="hidden-quote">
               Persistence is very important. You should not give up unless you
               are forced to give up.
           </div>
-          <div class="sitting clearfix">
+          <div class="sitting">
             <p>
               Am I sitting in a tin can. Far above the world. Planet Earth is
               blue. And there's nothing I can do. Though I'm past one hundred
@@ -101,23 +108,27 @@
               <br>
               Planet Earth is blue
               <br>
-              <a class="arrow-move-2" href="#"
-              >Read more about major Tom <span class="pink-arrow">➜</span></a>
+              <a class="about-tom" href="#"
+              >Read more about major Tom <span>➜</span></a>
             </p>
             </div>
           </div>
         </div>
+        <!--footer starts-->
         <footer class="footer">
           <div class="cookies">
-            <div class="glow"></div>
             <p>
               I don’t know where I’m going from here, but I promise it won’t be
               boring. You should accept cookies.
+              <span class="pink-arrow">➜</span>
             </p>
           </div>
-          <div class="accept-button">ACCEPT</div>
+          <div class="accept-button">accept</div>
         </footer>
+        <!--footer ends-->
       </div>
+      <!--bottom page right ends-->
     </section>
+    <!--full page ends-->
   </body>
 </html>
