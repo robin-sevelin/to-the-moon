@@ -4,9 +4,8 @@
   padding: 0;
 }
 
-p {
-  font-size: 0.9rem;
-  font-weight: 100;
+.clearfix {
+  overflow: hidden;
 }
 
 #full-page,
@@ -28,21 +27,23 @@ p {
 .header {
   position: relative;
   display: block;
-  width: 40%;
+  width: 35%;
   border: 4px solid black;
-  padding: 10px;
   background-color: rgba(245, 245, 245, 0.666);
   left: 50px;
   top: 75px;
 }
 
 .to-the-moon {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
   text-align: center;
   font-size: 4vw;
   text-transform: uppercase;
 }
 
 .arrow-move {
+  font-size: 1.2rem;
   position: relative;
   text-decoration: none;
   color: black;
@@ -50,7 +51,6 @@ p {
 
 .arrow-move span {
   position: relative;
-  z-index: 3;
   left: 0;
   transition: left 0.3s ease-in-out;
 }
@@ -61,7 +61,6 @@ p {
 
 .arrow-down {
   position: absolute;
-  z-index: 3;
   left: 50%;
   bottom: 20px;
   width: auto;
@@ -87,13 +86,15 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  justify-content: space-evenly;
   min-height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 .space-ventures {
-  font-size: 3rem;
-  height: fit-content;
+  text-align: center;
+  padding: 10px;
 }
 
 .space {
@@ -101,53 +102,59 @@ p {
   display: block;
   position: relative;
   z-index: 1;
-  top: 60px;
-  left: 10%;
+  filter: drop-shadow(0 0 0.75rem black);
+  left: -75px;
+  top: 20px;
+  font-weight: bold;
+  font-size: 5rem;
 }
 .ventures {
   position: relative;
-  top: 50%;
-  left: 25%;
   color: rgb(153, 148, 148);
   z-index: 0;
   font-family: "Times New Roman", Times, serif;
   opacity: 0.5;
+  left: 40px;
+  bottom: 40px;
+  font-size: 5rem;
 }
 
 .ground-control {
+  font-family: "rubik", sans-serif;
   padding: 20px;
-  margin: 10px;
 }
 
-h2 {
-  margin-bottom: 20px;
+.ground-control h2 {
+  padding-bottom: 10px;
 }
 
 blockquote {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: italic;
-  margin: 10px;
-  padding: 30px;
   font-weight: 100;
   text-align: center;
-  justify-content: center;
+  padding: 30px;
 }
 
 blockquote::before {
   font-size: 3rem;
   position: absolute;
-  left: 20px;
-  top: 10px;
+  left: 5px;
+  top: 5px;
   content: open-quote;
+  font-family: "Times New Roman", Times, serif;
+  color: #d200a2;
 }
 
 blockquote::after {
   font-size: 3rem;
-  bottom: 10px;
-  right: 20px;
+  bottom: 5px;
+  right: 5px;
   position: absolute;
   content: close-quote;
+  font-family: "Times New Roman", Times, serif;
+  color: #d200a2;
 }
 
 .hidden-quote {
@@ -155,20 +162,19 @@ blockquote::after {
 }
 
 .sitting {
-  font-size: 1rem;
-  margin: 10px;
   padding: 20px;
+  font-size: 1rem;
 }
 
 .arrow-move-2 {
   color: #d200a2;
   font-weight: bold;
-  font-family: "fira Code", sans-serif;
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
 }
 
 .arrow-move-2 span {
   position: relative;
-  z-index: 3;
   left: 0;
   transition: left 0.3s ease-in-out;
 }
@@ -182,37 +188,52 @@ blockquote::after {
 }
 
 .footer {
-  padding: 10px;
-  background-color: rgb(36, 30, 74);
-  opacity: 0.8;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(36, 30, 74);
+  opacity: 0.8;
+  justify-content: space-between;
+  border: 1px solid black;
   width: 100%;
+  padding: 5px;
+  align-items: center;
 }
 
 .cookies {
   color: #d200a2;
+  padding: 10px;
+  animation: glow 0.3s ease-in-out infinite alternate;
 }
 
-.accept-button {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 920px) {
-  p {
-    font-size: 1rem;
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #e60073;
   }
+  to {
+    text-shadow: 0 0 1px #fff;
+  }
+}
 
+.accept {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(6, 6, 147);
+  color: white;
+  font-family: "rubik", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.accept:hover {
+  color: #d200a2;
+}
+
+@media screen and (min-width: 1024px) {
   .arrow-move {
     display: flex;
     justify-content: end;
@@ -220,7 +241,7 @@ blockquote::after {
   }
 
   .bottom-page {
-    gap: 100px;
+    gap: 150px;
     display: flex;
     background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash\ desktop\(kopia\).jpg");
   }
@@ -230,39 +251,54 @@ blockquote::after {
     width: 50%;
   }
 
-  .space-ventures {
-    margin-top: 100px;
+  .space,
+  .ventures {
+    padding-left: 50px;
+    font-size: 5rem;
   }
 
-  .ground-control {
-    padding: 20px;
-    margin-top: 100px;
+  .floating {
+    padding-top: 100px;
   }
 
   .hidden-quote {
-    font-size: 2rem;
+    padding: 10px;
+    padding-top: 100px;
+    padding-right: 300px;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
     font-style: italic;
     font-weight: 100;
-    padding: 40px;
-    margin-top: 200px;
-    height: 300px;
     color: rgba(232, 155, 196, 0.372);
     display: block;
   }
 
+  .sitting {
+    padding-top: 50px;
+    padding-right: 100px;
+  }
+
+  blockquote::before {
+    padding-top: 50px;
+  }
+
   .major-tom {
-    padding: 20px;
+    padding: 10px;
     display: block;
     width: 150px;
     height: auto;
     float: right;
     transform: rotate(3deg);
   }
+
+  .footer-right {
+    flex-direction: column;
+  }
 }
 
 /* hamburger menu code starts*/
 
-button {
+.hamburger-menu {
   width: 35px;
   height: 35px;
   background: transparent;
@@ -271,10 +307,10 @@ button {
   pointer-events: none;
   right: 20px;
   top: 20px;
-  z-index: 6;
+  z-index: 4;
 }
 
-button span {
+.hamburger-menu span {
   display: block;
   width: 35px;
   height: 5px;
@@ -290,10 +326,10 @@ input {
   width: 35px;
   height: 35px;
   opacity: 0;
-  z-index: 6;
+  z-index: 7;
 }
 
-button span:nth-child(2) {
+.hamburger-menu span:nth-child(2) {
   left: -10px;
   position: relative;
   transition: left 0.3s ease-in-out;
@@ -329,7 +365,7 @@ nav {
   min-height: 100vh;
   opacity: 0;
   transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  z-index: 5;
+  z-index: 2;
   visibility: hidden;
 }
 
@@ -357,7 +393,6 @@ ul {
   color: black;
   filter: drop-shadow(0 -6mm 4mm rgb(25, 3, 32));
   font-size: 4rem;
-  font-weight: bold;
   background-image: linear-gradient(90deg, #d200a2, #d488c2);
   background-size: 0% 5px;
   background-repeat: no-repeat;
