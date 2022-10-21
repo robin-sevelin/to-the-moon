@@ -1,7 +1,7 @@
-@import url(/style/layouts/_base.scss);
+@import "/Users/robinsevelin/Desktop/Medieinstitutet/inl-2-kundprojekt-robin-sevelin/style/layouts/_base.scss";
 
-@import url(/style/layouts/_hamburger.scss);
-
-@media screen and (min-width: 1024px) {
-  @import url(/style/layouts/_desktop.scss);
+@media all and (min-width: 1024px) {
+  @import "/Users/robinsevelin/Desktop/Medieinstitutet/inl-2-kundprojekt-robin-sevelin/style/layouts/_desktop.scss";
 }
+
+@import "/Users/robinsevelin/Desktop/Medieinstitutet/inl-2-kundprojekt-robin-sevelin/style/layouts/_hamburger.scss";
