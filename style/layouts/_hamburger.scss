@@ -1,0 +1,111 @@
+/* hamburger menu code starts*/
+
+.hamburger-menu {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 0;
+  position: fixed;
+  pointer-events: none;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+input {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  z-index: 7;
+}
+
+.hamburger-menu span:nth-child(2) {
+  left: -10px;
+  position: relative;
+  transition: left 0.3s ease-in-out;
+}
+
+input:hover + .menu button span:nth-child(2) {
+  left: 0.5px;
+}
+
+input:checked + .menu button span {
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+input:checked + .menu button span:nth-child(2) {
+  opacity: 0;
+}
+
+input:checked + .menu button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+input:checked + .menu button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(245, 245, 245, 0.617);
+  width: 100vw;
+  min-height: 100vh;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 2;
+  visibility: hidden;
+}
+
+input:checked + .menu nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul {
+  min-height: 100vh;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  justify-content: space-evenly;
+}
+
+.list-about-tom,
+.list-our-story,
+.list-space-ventures {
+  text-decoration: none;
+  color: black;
+  filter: drop-shadow(0 -6mm 4mm rgb(25, 3, 32));
+  font-size: 4rem;
+  background-image: linear-gradient(90deg, #d200a2, #d488c2);
+  background-size: 0% 5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+
+.list-about-tom:hover,
+.list-our-story:hover,
+.list-space-ventures:hover {
+  background-size: 100% 5px;
+}
+
+/* hamburger menu code ends*/

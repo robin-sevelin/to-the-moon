@@ -1,0 +1,60 @@
+.arrow-move {
+  display: flex;
+  justify-content: end;
+  padding-right: 15px;
+}
+
+.bottom-page {
+  gap: 150px;
+  display: flex;
+  background-image: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash\ desktop\(kopia\).jpg");
+}
+
+.bottom-page-left,
+.bottom-page-right {
+  width: 50%;
+}
+
+.space,
+.ventures {
+  padding-left: 50px;
+  font-size: 5rem;
+}
+
+.floating {
+  padding-top: 100px;
+}
+
+.hidden-quote {
+  padding: 10px;
+  padding-top: 100px;
+  padding-right: 300px;
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 100;
+  color: rgba(232, 155, 196, 0.372);
+  display: block;
+}
+
+.sitting {
+  padding-top: 50px;
+  padding-right: 100px;
+}
+
+blockquote::before {
+  padding-top: 50px;
+}
+
+.major-tom {
+  padding: 10px;
+  display: block;
+  width: 150px;
+  height: auto;
+  float: right;
+  transform: rotate(3deg);
+}
+
+.footer-right {
+  flex-direction: column;
+}

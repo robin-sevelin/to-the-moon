@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+
+#full-page,
+.full-page {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "rubik", sans-serif;
+}
+
+.top-page {
+  background-image: url("/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  position: relative;
+  display: block;
+  width: 35%;
+  border: 4px solid black;
+  background-color: rgba(245, 245, 245, 0.666);
+  left: 50px;
+  top: 75px;
+}
+
+.to-the-moon {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+
+.arrow-move {
+  font-size: 1.2rem;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.arrow-move span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.arrow-move:hover span {
+  left: 5px;
+}
+
+.arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow-down span {
+  transform: rotate(90deg);
+  font-size: 5rem;
+}
+
+.arrow-down:hover {
+  bottom: 10px;
+}
+
+.bottom-page {
+  color: white;
+  background: url("/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.space-ventures {
+  text-align: center;
+  padding: 10px;
+}
+
+.space {
+  color: whitesmoke;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 0.75rem black);
+  left: -75px;
+  top: 20px;
+  font-weight: bold;
+  font-size: 5rem;
+}
+.ventures {
+  position: relative;
+  color: rgb(153, 148, 148);
+  z-index: 0;
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0.5;
+  left: 40px;
+  bottom: 40px;
+  font-size: 5rem;
+}
+
+.ground-control {
+  font-family: "rubik", sans-serif;
+  padding: 20px;
+}
+
+.ground-control h2 {
+  padding-bottom: 10px;
+}
+
+blockquote {
+  position: relative;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  padding: 30px;
+}
+
+blockquote::before {
+  font-size: 3rem;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  content: open-quote;
+  font-family: "Times New Roman", Times, serif;
+  color: #d200a2;
+}
+
+blockquote::after {
+  font-size: 3rem;
+  bottom: 5px;
+  right: 5px;
+  position: absolute;
+  content: close-quote;
+  font-family: "Times New Roman", Times, serif;
+  color: #d200a2;
+}
+
+.hidden-quote {
+  display: none;
+}
+
+.sitting {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.arrow-move-2 {
+  color: #d200a2;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
+}
+
+.arrow-move-2 span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.arrow-move-2:hover span {
+  left: 5px;
+}
+
+.major-tom {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(36, 30, 74);
+  opacity: 0.8;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+}
+
+.cookies {
+  color: #d200a2;
+  padding: 10px;
+  animation: glow 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #e60073;
+  }
+  to {
+    text-shadow: 0 0 1px #fff;
+  }
+}
+
+.accept {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(6, 6, 147);
+  color: white;
+  font-family: "rubik", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.accept:hover {
+  color: #d200a2;
+}
