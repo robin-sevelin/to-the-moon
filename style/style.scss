@@ -1,9 +1,9 @@
-@import "/style/layouts/normalize";
+@import "layouts/_normalize.scss";
 
-@import "/style/layouts/base";
+@import "layouts/base";
 
 @media all and (min-width: 1024px) {
-  @import "/style/layouts/desktop";
+  @import "layouts/desktop";
 }
 
-@import "/style/layouts/hamburger";
+@import "layouts/hamburger";
